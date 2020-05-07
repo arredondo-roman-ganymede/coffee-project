@@ -1,13 +1,11 @@
-"use strict"
+"use strict";
 
 
 // returning html with that table item
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee col">';
+    html += '<div class="m-0 d-flex align-items-baseline"><div class="float-left"><h4 class="m-0">' + coffee.name + '</h4></div><div><p class="pl-1 text-secondary">' + coffee.roast +'</p></div></div>';
+    html += '</div>';
 
     return html;
 }

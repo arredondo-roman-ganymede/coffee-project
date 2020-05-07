@@ -1,5 +1,7 @@
 "use strict"
 
+
+// returning html with that table item
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -17,6 +19,9 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+
+// this makes new array from old array based on selection
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -54,4 +59,5 @@ var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+// shows whatever you select ex: roasts
 submitButton.addEventListener('click', updateCoffees);

@@ -7,3 +7,27 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+body {
+    background-image: url("img/coffee-background.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-form {
+    background-color: white;
+    padding: 1em;
+}
+
+h1 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+h3, h4{
+    font-family: 'Playfair Display', serif;
+}
+
+label {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}

@@ -5,11 +5,12 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1 class="text-center">Coffee!</h1>
+<h1 class="text-center">Armando & Jay's Homebrew Coffee Shop</h1>
 <hr class="w-75">
-<div class="container row row-cols-2 m-auto">
+<div class="container row row-cols-2 m-auto bg-form">
     <div class="container col">
         <div class="row row-cols-2" id="coffees">
         </div>
@@ -17,35 +18,36 @@
     <div class="col">
         <form>
             <div>
-                <label for="roast-selection" class="font-weight-bold">Roast: </label>
+                <label for="roast-selection">Roast: </label>
                 <select id="roast-selection" class="w-100">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select> <br>
-                <label for="coffee-search" class="font-weight-bold w-100"> Coffee Search: <br><input type="text" name="coffee-search" id="coffee-search" class="form-control w-100" placeholder="Search Coffee Here"></label>
+                <label for="coffee-search" class="w-100"> Coffee Search: <br><input type="text" name="coffee-search" id="coffee-search" class="form-control w-100" placeholder="Search Coffee Here"></label>
                 <br>
                 <input id="submit" type="submit" class="btn btn-primary w-100">
             </div>
             <br>
             <div>
                 <h3 class="text-center">Add Coffee</h3>
-                <label for="roast-addition" class="font-weight-bold">Roast: </label>
+                <label for="roast-addition">Roast: </label>
                 <select id="roast-addition" class="w-100">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
                     <br>
-                    <label for="new-coffee" class="font-weight-bold w-100">Name: <input type="text" name="new-coffee" id="new-coffee" class="form-control w-100" placeholder="Enter New Coffee Name Here!"></label>
+                    <label for="new-coffee" class="w-100">Name: <input type="text" name="new-coffee" id="new-coffee" class="form-control w-100" placeholder="Enter New Coffee Name Here!"></label>
                     <br>
                 <button id="new-submit" type="button" class="btn btn-primary w-100" >Add Your Own!</button>
             </div>
         </form>
     </div>
 </div>
-
-
+<a href="http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide" class="d-flex justify-content-center mt-2"><button class="btn btn-success">Learn More About Coffee!</button></a>
+<script src="https://kit.fontawesome.com/a20fb32f37.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

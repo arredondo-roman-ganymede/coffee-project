@@ -47,6 +47,20 @@ function searchCoffee() {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+var newCoffee = document.querySelector('#new-coffee');
+var roastAddition = document.querySelector('#roast-addition');
+var newButton = document.querySelector('#new-submit');
+newButton.addEventListener("click", addCoffee);
+
+function addCoffee() {
+    coffees.unshift({
+        name: newCoffee.value,
+        roast: roastAddition.value
+    });
+    tbody.innerHTML = renderCoffees(coffees)
+}
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [

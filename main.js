@@ -19,8 +19,6 @@ function renderCoffees(coffees) {
 }
 
 
-// this makes new array from old array based on selection
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -33,34 +31,21 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+var coffeeSearch = document.querySelector("#coffee-search");
 
-// function searchCoffee() {
-//     var coffeeSearch = coffeeSearch.value;
-//     coffees.forEach(function(coffee) {
-//         if (!coffee.name.toLowerCase() === coffeeSearch.toLowerCase()) {
-//            searchedCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(searchedCoffees);
-// }
-
+coffeeSearch.addEventListener("keyup", searchCoffee) ;
 
 function searchCoffee() {
-    var coffeeSearch = coffeeSearch.value;
-    coffeeSearch = coffeeSearch.toLowerCase();
+    var coffeeInput = coffeeSearch.value;
+    var filteredCoffees = [];
 
-    for (var i = 0; i < coffees.length; i++) {
-        if (!coffees[i].name.innerHTML.toLowerCase().includes(coffeeSearch)) {
-            coffees[i].name.style.display="none";
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(coffeeInput)) {
+           filteredCoffees.push(coffee);
         }
-        else {
-            coffees[i].name.style.display="list-item";
-        }
-    }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
-
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -90,4 +75,3 @@ tbody.innerHTML = renderCoffees(coffees);
 // shows whatever you select ex: roasts
 submitButton.addEventListener('click', updateCoffees);
 
-var coffeeSearch = document.querySelector("#coffee-search");
